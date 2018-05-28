@@ -10,6 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  
+    @IBOutlet weak var name: UITextField!
+    
+    @IBAction func unwind(segue:UIStoryboardSegue){
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {let viewController2 = segue.destination as! ViewController2
+        viewController2.name = name.text!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
